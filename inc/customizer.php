@@ -50,6 +50,7 @@ function rachievee_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function rachievee_customize_preview_js() {
-	wp_enqueue_script( 'rachievee-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	//@todo: Put back once I've set up Grunt - assuming I keep this...
+	// wp_enqueue_script( 'rachievee-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'rachievee_customize_preview_js' );
