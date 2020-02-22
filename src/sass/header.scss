@@ -1,1 +1,72 @@
-@import 'variables.scss';
+.site-header {
+    background: $white;
+    border-top: 3px solid $farmhouse-green;
+    box-shadow: 0px 3px 4px -2px $box-shadow;
+    padding: 0 1rem;
+}
+
+.site-header-wrap {
+    margin: auto;
+    max-width: $max-site-width;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-branding {
+    @include medium-up {
+        display: flex;
+        align-items: center;
+    }
+
+    .site-title {
+        margin: 1rem 0;
+        font-size: 2.5rem;
+
+        @include medium-up {
+            margin: 0;
+        }
+    }
+
+    .site-description {
+        @include medium-up {
+            font-size: 1.2rem;
+            margin: 0 0 0 1rem;
+        }
+    }
+}
+
+.menu-header-menu-container {
+    height: 100%;
+}
+
+.main-navigation {
+    ul,
+    li {
+        height: 100%;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            margin-right: -1rem;
+        }
+    }
+
+    a {
+        @include tablet-up {
+            padding: 0 1rem;
+            font-size: 1.1rem;
+        }
+    }
+
+    .current-menu-item {
+        background-color: $farmhouse-green;
+
+        a {
+            font-family: 'open_sans_condensedbold';
+        }
+    }
+}
