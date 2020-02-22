@@ -1,1 +1,10 @@
-$text-color: #010101;
+$white: #ffffff;
+$darkest: #111111;
+$medium-grey: #353535;
+$farmhouse-green: #bbead9;
+
+$text-color: $darkest;
+$button-color: $darkest;
+$button-border-color: $darkest;
+$button-hover-color: $white;
+$button-hover-border: $darkest;

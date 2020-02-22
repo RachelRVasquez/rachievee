@@ -1,1 +1,55 @@
-@import 'variables.scss';
+/* Media Queries ========================== */
+
+@mixin large-up {
+  @media ( min-width: #{1200px} ) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media ( min-width: #{992px} ) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media ( min-width: #{768px} ) {
+    @content;
+  }
+}
+
+/* Visual ========================== */
+
+@mixin transition {
+    transition: all .3s ease-in-out;
+}
+
+/* Helpers ========================== */
+
+@mixin remove-btn-defaults {
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+
+/* Forms ========================== */
+
+@mixin placeholder( $color: $text-color ){
+	::-webkit-input-placeholder {
+   		color: $color;
+	}
+
+	:-moz-placeholder {
+	   color: $color;
+	}
+
+	::-moz-placeholder {
+	   color: $color;
+	}
+
+	:-ms-input-placeholder {
+	   color: $color;
+	}
+}
