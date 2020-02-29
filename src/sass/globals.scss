@@ -1,13 +1,13 @@
 body{
-    font-family: 'open_sans_condensedlight', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
+    @include open-sans-light;
+    font-size: 16px;
+    line-height: 22px;
     color: $text-color;
     background: url('../../images/tileable_wood.jpg');
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'amatic_scbold', sans-serif;
+    @include open-sans-bold;
 
     a {
         text-decoration: none;
@@ -32,6 +32,19 @@ a {
     }
 }
 
+button {
+    @include open-sans-bold;
+    border-radius: 5px;
+    background-color: $darkest;
+    border: 2px solid $darkest;
+    color: $white;
+
+    &:hover, &:active, &:focus {
+        background-color: $white;
+        color: $darkest;
+    }
+}
+
 .site-content {
     margin: auto;
     max-width: $max-site-width;
@@ -39,6 +52,8 @@ a {
 
     @include tablet-up {
         display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
     }
 }
 
@@ -50,6 +65,10 @@ a {
     border-radius: 5px;
     border-top: 5px solid $farmhouse-green;
     box-shadow: 0px 3px 4px -2px $box-shadow;
+
+    @include medium-up {
+        padding: 1.3rem;
+    }
 }
 
 .content-area {
@@ -66,6 +85,67 @@ a {
 }
 
 .entry-title {
-    margin-top: 0;
-    font-family: 'open_sans_condensedbold';
+    @include open-sans-bold;
+    margin: 0 0 .5rem;
+}
+
+.post-thumbnail {
+    margin-top: 1rem;
+    display: block;
+}
+
+.rt-reading-time {
+    @include open-sans-bold;
+    margin-bottom: 1rem;
+
+    & .post {
+        &:after {
+            content: "";
+            background-image: linear-gradient(to left, $white, $farmhouse-green);
+            height: 2px;
+            display: block;
+            margin-top: 4px;
+        }
+    }
+}
+
+.entry-content {
+    strong, b {
+        @include open-sans-bold;
+    }
+
+    em, i {
+        @include open-sans-italic;
+    }
+}
+
+.entry-footer {
+    background-color: $lightest-grey;
+    margin: 0 -1rem;
+    padding: 1rem;
+    overflow: hidden;
+
+    @include medium-up {
+        margin: 0 -1.3rem;
+    }
+
+    .cat-links,
+    .tags-links,
+    .comments-link {
+        display: block;
+    }
+
+    .cat-links,
+    .comments-link {
+        float: left;
+    }
+
+    .tags-links,
+    .edit-link {
+        float: right;
+    }
+
+    .comments-link {
+        clear: left;
+    }
 }

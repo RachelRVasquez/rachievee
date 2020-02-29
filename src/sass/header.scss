@@ -20,8 +20,9 @@
     }
 
     .site-title {
-        margin: 1rem 0;
+        @include handwritten-bold;
         font-size: 2.5rem;
+        margin: 1rem 0;
 
         @include medium-up {
             margin: 0;
@@ -49,16 +50,14 @@
     li {
         display: flex;
         align-items: center;
-
-        &:last-child {
-            margin-right: -1rem;
-        }
     }
 
     a {
+        font-size: 1rem;
+        text-transform: uppercase;
+
         @include tablet-up {
             padding: 0 1rem;
-            font-size: 1.1rem;
         }
     }
 
@@ -66,7 +65,7 @@
         background-color: $farmhouse-green;
 
         a {
-            font-family: 'open_sans_condensedbold';
+            @include open-sans-bold;
         }
     }
 }

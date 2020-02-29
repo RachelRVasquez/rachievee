@@ -18,6 +18,28 @@
   }
 }
 
+/* Typography ========================== */
+
+@mixin open-sans-bold {
+    font-family: 'open_sans_condensedbold', sans-serif;
+}
+
+@mixin open-sans-italic {
+    font-family: 'open_sans_condensedLtIt', sans-serif;
+}
+
+@mixin open-sans-light {
+    font-family: 'open_sans_condensedlight', sans-serif;
+}
+
+@mixin handwritten-bold {
+    font-family: 'amatic_scbold', sans-serif;
+}
+
+@mixin handwritten-regular {
+    font-family: 'amatic_scregular', sans-serif;
+}
+
 /* Visual ========================== */
 
 @mixin transition {

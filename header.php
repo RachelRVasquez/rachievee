@@ -28,17 +28,9 @@
 		<div class="site-header-wrap">
 			<div class="site-branding">
 				<?php
-				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
-				$rachievee_description = get_bloginfo( 'description', 'display' );
+				the_custom_logo(); ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php $rachievee_description = get_bloginfo( 'description', 'display' );
 				if ( $rachievee_description || is_customize_preview() ) :
 					?>
 					<p class="site-description"><?php echo $rachievee_description; /* WPCS: xss ok. */ ?></p>
