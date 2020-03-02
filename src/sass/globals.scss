@@ -1,4 +1,4 @@
-body{
+body {
     @include open-sans-light;
     font-size: 16px;
     line-height: 22px;
@@ -24,6 +24,10 @@ h3 {
     line-height: 31px;
 }
 
+a, button {
+    @include transition;
+}
+
 a {
     color: $text-color;
 
@@ -33,16 +37,7 @@ a {
 }
 
 button {
-    @include open-sans-bold;
-    border-radius: 5px;
-    background-color: $darkest;
-    border: 2px solid $darkest;
-    color: $white;
-
-    &:hover, &:active, &:focus {
-        background-color: $white;
-        color: $darkest;
-    }
+    @include main-btn-style;
 }
 
 .site-content {
@@ -94,6 +89,10 @@ button {
     display: block;
 }
 
+.more-link {
+    @include link-btn-style;
+}
+
 .rt-reading-time {
     @include open-sans-bold;
     margin-bottom: 1rem;
@@ -117,10 +116,22 @@ button {
     em, i {
         @include open-sans-italic;
     }
+
+    table {
+        th, td {
+            padding: .5rem;
+        }
+
+        tr:first-child {
+            th, td {
+                background-color: $lightest-grey;
+            }
+        }
+    }
 }
 
 .entry-footer {
-    background-color: $lightest-grey;
+    background-color: $light-farmhouse-green;
     margin: 0 -1rem;
     padding: 1rem;
     overflow: hidden;
@@ -130,22 +141,20 @@ button {
     }
 
     .cat-links,
-    .tags-links,
     .comments-link {
         display: block;
     }
 
-    .cat-links,
-    .comments-link {
+    .cat-links {
         float: left;
     }
 
-    .tags-links,
-    .edit-link {
+    .comments-link {
         float: right;
     }
 
-    .comments-link {
-        clear: left;
+    .edit-link {
+        clear: both;
+        float: left;
     }
 }

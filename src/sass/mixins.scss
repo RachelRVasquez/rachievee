@@ -46,6 +46,29 @@
     transition: all .3s ease-in-out;
 }
 
+@mixin main-btn-style {
+    @include open-sans-bold;
+    border-radius: 5px;
+    background-color: $darkest;
+    border: 2px solid $darkest;
+    color: $white;
+    padding: .5rem 1rem;
+
+    &:hover, &:active, &:focus {
+        background-color: $white;
+        color: $darkest;
+    }
+}
+
+@mixin link-btn-style {
+    @include main-btn-style;
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+    }
+}
+
 /* Helpers ========================== */
 
 @mixin remove-btn-defaults {
