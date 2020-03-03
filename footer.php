@@ -24,20 +24,26 @@
 				<li class="menu-item">
 					<a href="https://twitter.com/RachelRVasquez">
 						<span aria-hidden="true" class="fab fa-twitter-square">
-						<span class="screen-reader-only">Twitter</span>
+						<span class="screen-reader-text"><?php esc_html_e( 'Twitter', 'rachievee' ); ?></span>
 					</a>
 				</li>
 				<li class="menu-item">
-					<a href="https://plus.google.com/107452778160939905571/posts/">Google+</a>
+					<a href="http://www.linkedin.com/pub/rachel-vasquez/30/a62/4a0/">
+						<span aria-hidden="true" class="fab fa-linkedin">
+						<span class="screen-reader-text"><?php esc_html_e( 'LinkedIn', 'rachievee' ); ?></span>
+					</a>
 				</li>
 				<li class="menu-item">
-					<a href="http://www.linkedin.com/pub/rachel-vasquez/30/a62/4a0/">LinkedIn</a>
+					<a href="https://github.com/RachelRVasquez/">
+						<span aria-hidden="true" class="fab fa-github-square">
+						<span class="screen-reader-text"><?php esc_html_e( 'Github', 'rachievee' ); ?></span>
+					</a>
 				</li>
 				<li class="menu-item">
-					<a href="http://wordpress.stackexchange.com/users/42783/rachievee">WP Stack Exchange</a>
-				</li>
-				<li class="menu-item">
-					<a href="https://profiles.wordpress.org/rachievee/">WordPress.org Profile</a>
+					<a href="https://profiles.wordpress.org/rachievee/">
+						<span aria-hidden="true" class="fab fa-wordpress">
+						<span class="screen-reader-text"><?php esc_html_e( 'WordPress.org Profile', 'rachievee' ); ?></span>
+					</a>
 				</li>
 			</ul>
 		</div>

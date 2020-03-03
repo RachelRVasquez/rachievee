@@ -88,3 +88,26 @@ form {
         margin-right: 2%;
     }
 }
+
+.comments-area {
+    .comment-reply-title {
+        margin-bottom: 0;
+    }
+
+    .logged-in-as {
+        margin-top: 0;
+    }
+
+    .avatar {
+        border-radius: 5px;
+    }
+
+    .comment-list {
+        margin-left: 0;
+
+        li > ol.children {
+            padding-left: 0;
+            margin-top: 1rem;
+        }
+    }
+}

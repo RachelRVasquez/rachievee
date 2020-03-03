@@ -23,6 +23,8 @@ node_modules/
 *.sqlite
 
 dist/css/main.min.css
+dist/css/main.css
+dist/css/main.css.map
 dist/js/*
 cache/*
 .idea/

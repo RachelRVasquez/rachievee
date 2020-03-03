@@ -82,3 +82,10 @@
         float: left;
     }
 }
+
+.comment-form {
+    input[type="submit"] {
+        @include main-btn-style;
+        font-size: 1rem;
+    }
+}
