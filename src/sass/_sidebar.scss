@@ -1,0 +1,42 @@
+.widget-title {
+    @include handwritten-bold;
+    font-size: 26px;
+    line-height: 30px;
+}
+
+.widget {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 1rem;
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.search-form {
+    @include tablet-up {
+        display: flex;
+    }
+
+    label,
+    .search-submit {
+        width: 100%;
+
+        @include tablet-up {
+            width: auto;
+        }
+    }
+
+    .search-field {
+        @include tablet-up {
+            border-radius: 5px 0 0 5px;
+        }
+    }
+
+    .search-submit {
+        @include main-btn-style;
+        @include tablet-up {
+            border-radius: 0 5px 5px 0;
+        }
+    }
+}

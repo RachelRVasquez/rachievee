@@ -121,6 +121,15 @@ if ( ! function_exists( 'rachievee_post_thumbnail' ) ) :
 
 			<div class="post-thumbnail">
 				<?php the_post_thumbnail(); ?>
+
+				<?php if ( get_the_post_thumbnail_caption() ) : ?>
+					<div class="post-thumbnail-caption">
+						<?php
+						esc_html_e( 'Image credit: ', 'rachievee' );
+						the_post_thumbnail_caption();
+						?>
+					</div>
+				<?php endif; ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>

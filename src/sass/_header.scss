@@ -6,8 +6,7 @@
 }
 
 .site-header-wrap {
-    margin: auto;
-    max-width: $max-site-width;
+    @include site-container;
     height: 80px;
     display: flex;
     justify-content: space-between;

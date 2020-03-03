@@ -45,6 +45,7 @@ if ( ! function_exists( 'rachievee_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'rachievee' ),
+			'menu-2' => esc_html__( 'Portfolio', 'rachievee' ),
 		) );
 
 		/*
@@ -134,6 +135,8 @@ add_action( 'widgets_init', 'rachievee_widgets_init' );
  */
 function rachievee_scripts() {
 	wp_enqueue_style( 'rachievee-wp', get_stylesheet_uri() );
+	//@todo: Later only download icons I need locally and replace script
+	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/4946f82067.js' );
 	wp_enqueue_style( 'rachievee-main', get_template_directory_uri() . '/dist/css/main.min.css' );
 
 

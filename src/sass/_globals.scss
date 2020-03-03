@@ -1,0 +1,90 @@
+body {
+    @include open-sans-light;
+    font-size: 18px;
+    line-height: 22px;
+    color: $text-color;
+    background: url('../../images/tileable_wood.jpg');
+}
+
+h1, h2, h3, h4, h5 {
+    @include open-sans-bold;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 33px;
+}
+
+h3 {
+    font-size: 26px;
+    line-height: 31px;
+}
+
+a, button, input[type="submit"] {
+    @include transition;
+}
+
+a {
+    color: $text-color;
+
+    &:hover, &:visited, &:active, &:focus {
+        color: $text-color;
+    }
+}
+
+button {
+    @include main-btn-style;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+form {
+    input[type="search"] {
+        font-size: 14px;
+    }
+}
+
+.site-content {
+    margin: auto;
+    max-width: $max-site-width;
+    padding: 1rem;
+
+    @include tablet-up {
+        display: flex;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+}
+
+.content-area,
+.widget-area {
+    width: 100%;
+    padding: 1rem;
+    background-color: $white;
+    border-radius: 5px;
+    border-top: 5px solid $farmhouse-green;
+    box-shadow: 0px 3px 4px -2px $box-shadow;
+
+    @include medium-up {
+        padding: 1.3rem;
+    }
+}
+
+.content-area {
+    @include tablet-up {
+        width: 70%;
+    }
+}
+
+.widget-area {
+    @include tablet-up {
+        width: 28%;
+        margin-right: 2%;
+    }
+}

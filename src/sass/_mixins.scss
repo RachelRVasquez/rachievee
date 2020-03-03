@@ -56,6 +56,7 @@
 
     &:hover, &:active, &:focus {
         background-color: $white;
+        border-color: $darkest;
         color: $darkest;
     }
 }
@@ -76,6 +77,12 @@
     background: none;
     border: none;
     box-shadow: none;
+}
+
+@mixin site-container {
+    margin: auto;
+    width: 100%;
+    max-width: $max-site-width;
 }
 
 

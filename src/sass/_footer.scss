@@ -1,0 +1,20 @@
+.site-footer {
+    padding: 1.5rem 1rem .5rem;
+
+    .site-footer-inner {
+        @include site-container;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #footer-menu {
+        list-style: none;
+        display: flex;
+        margin-bottom: 0;
+
+        .menu-item {
+            margin-left: 1rem;
+        }
+    }
+}

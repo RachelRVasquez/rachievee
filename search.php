@@ -8,6 +8,7 @@
  */
 
 get_header();
+get_sidebar();
 ?>
 
 	<section id="primary" class="content-area">
@@ -16,12 +17,12 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title">
+				<h2 class="page-title">
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'rachievee' ), '<span>' . get_search_query() . '</span>' );
 					?>
-				</h1>
+				</h2>
 			</header><!-- .page-header -->
 
 			<?php
@@ -51,5 +52,4 @@ get_header();
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

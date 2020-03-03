@@ -14,19 +14,33 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'rachievee' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'rachievee' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'rachievee' ), 'rachievee', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
+		<div class="site-footer-inner">
+			<div class="site-info">
+				<?php echo esc_html( 'RachieVee', 'rachievee' ); ?>
+				<span aria-hidden="true">&copy;</span>
+				<?php echo date( 'Y' ); ?>
+			</div><!-- .site-info -->
+			<ul id="footer-menu" class="menu">
+				<li class="menu-item">
+					<a href="https://twitter.com/RachelRVasquez">
+						<span aria-hidden="true" class="fab fa-twitter-square">
+						<span class="screen-reader-only">Twitter</span>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a href="https://plus.google.com/107452778160939905571/posts/">Google+</a>
+				</li>
+				<li class="menu-item">
+					<a href="http://www.linkedin.com/pub/rachel-vasquez/30/a62/4a0/">LinkedIn</a>
+				</li>
+				<li class="menu-item">
+					<a href="http://wordpress.stackexchange.com/users/42783/rachievee">WP Stack Exchange</a>
+				</li>
+				<li class="menu-item">
+					<a href="https://profiles.wordpress.org/rachievee/">WordPress.org Profile</a>
+				</li>
+			</ul>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

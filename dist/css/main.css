@@ -1,0 +1,366 @@
+/* Media Queries ========================== */
+/* Typography ========================== */
+/* Visual ========================== */
+/* Helpers ========================== */
+/* Forms ========================== */
+@font-face {
+  font-family: "amatic_scbold";
+  src: url("../fonts/amaticsc-bold-webfont.woff2") format("woff2"), url("../fonts/amaticsc-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "amatic_scregular";
+  src: url("../fonts/amaticsc-regular-webfont.woff2") format("woff2"), url("../fonts/amaticsc-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sans_condensedbold";
+  src: url("../fonts/opensanscondensed-bold-webfont.woff2") format("woff2"), url("../fonts/opensanscondensed-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sans_condensedlight";
+  src: url("../fonts/opensanscondensed-light-webfont.woff2") format("woff2"), url("../fonts/opensanscondensed-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "open_sans_condensedLtIt";
+  src: url("../fonts/opensanscondensed-lightitalic-webfont.woff2") format("woff2"), url("../fonts/opensanscondensed-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "open_sans_condensedlight", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #111111;
+  background: url("../../images/tileable_wood.jpg");
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "open_sans_condensedbold", sans-serif;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 33px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 31px;
+}
+
+a, button, input[type=submit] {
+  transition: all 0.3s ease-in-out;
+}
+
+a {
+  color: #111111;
+}
+a:hover, a:visited, a:active, a:focus {
+  color: #111111;
+}
+
+button {
+  font-family: "open_sans_condensedbold", sans-serif;
+  border-radius: 5px;
+  background-color: #111111;
+  border: 2px solid #111111;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+button:hover, button:active, button:focus {
+  background-color: #ffffff;
+  border-color: #111111;
+  color: #111111;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+form input[type=search] {
+  font-size: 14px;
+}
+
+.site-content {
+  margin: auto;
+  max-width: 1700px;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .site-content {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+}
+
+.content-area,
+.widget-area {
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 5px solid #bbead9;
+  box-shadow: 0px 3px 4px -2px #ddd;
+}
+@media (min-width: 992px) {
+  .content-area,
+.widget-area {
+    padding: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-area {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .widget-area {
+    width: 28%;
+    margin-right: 2%;
+  }
+}
+
+.post-thumbnail {
+  margin-top: 1rem;
+  display: block;
+  background-color: #f7f7f7;
+}
+.post-thumbnail .post-thumbnail-caption {
+  padding: 0.5rem;
+}
+
+.entry-title {
+  font-family: "open_sans_condensedbold", sans-serif;
+  margin: 0 0 0.5rem;
+}
+
+.more-link {
+  font-family: "open_sans_condensedbold", sans-serif;
+  border-radius: 5px;
+  background-color: #111111;
+  border: 2px solid #111111;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.more-link:hover, .more-link:active, .more-link:focus {
+  background-color: #ffffff;
+  border-color: #111111;
+  color: #111111;
+}
+.more-link:hover, .more-link:active, .more-link:focus {
+  text-decoration: none;
+}
+
+.rt-reading-time {
+  font-family: "open_sans_condensedbold", sans-serif;
+  margin-bottom: 1rem;
+}
+.rt-reading-time .post:after {
+  content: "";
+  background-image: linear-gradient(to left, #ffffff, #bbead9);
+  height: 2px;
+  display: block;
+  margin-top: 4px;
+}
+
+.entry-content strong, .entry-content b {
+  font-family: "open_sans_condensedbold", sans-serif;
+}
+.entry-content em, .entry-content i {
+  font-family: "open_sans_condensedLtIt", sans-serif;
+}
+.entry-content table th, .entry-content table td {
+  padding: 0.5rem;
+}
+.entry-content table tr:first-child th, .entry-content table tr:first-child td {
+  background-color: #f7f7f7;
+}
+
+.entry-footer {
+  background-color: #eef9f5;
+  margin: 0 -1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .entry-footer {
+    margin: 0 -1.3rem;
+  }
+}
+.entry-footer .cat-links,
+.entry-footer .comments-link {
+  display: block;
+}
+.entry-footer .cat-links {
+  float: left;
+}
+.entry-footer .comments-link {
+  float: right;
+}
+.entry-footer .edit-link {
+  clear: both;
+  float: left;
+}
+
+.site-header {
+  background: #ffffff;
+  border-top: 3px solid #bbead9;
+  box-shadow: 0px 3px 4px -2px #ddd;
+  padding: 0 1rem;
+}
+
+.site-header-wrap {
+  margin: auto;
+  width: 100%;
+  max-width: 1700px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 992px) {
+  .site-branding {
+    display: flex;
+    align-items: center;
+  }
+}
+.site-branding .site-title {
+  font-family: "amatic_scbold", sans-serif;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+@media (min-width: 992px) {
+  .site-branding .site-title {
+    margin: 0;
+  }
+}
+@media (min-width: 992px) {
+  .site-branding .site-description {
+    font-size: 1.2rem;
+    margin: 0 0 0 1rem;
+  }
+}
+
+.menu-header-menu-container {
+  height: 100%;
+}
+
+.main-navigation ul,
+.main-navigation li {
+  height: 100%;
+}
+.main-navigation li {
+  display: flex;
+  align-items: center;
+}
+.main-navigation a {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .main-navigation a {
+    padding: 0 1rem;
+  }
+}
+.main-navigation .current-menu-item {
+  background-color: #bbead9;
+}
+.main-navigation .current-menu-item a {
+  font-family: "open_sans_condensedbold", sans-serif;
+}
+
+.site-footer {
+  padding: 1.5rem 1rem 0.5rem;
+}
+.site-footer .site-footer-inner {
+  margin: auto;
+  width: 100%;
+  max-width: 1700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-footer #footer-menu {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0;
+}
+.site-footer #footer-menu .menu-item {
+  margin-left: 1rem;
+}
+
+.widget-title {
+  font-family: "amatic_scbold", sans-serif;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.widget {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1rem;
+}
+.widget:last-child {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .search-form {
+    display: flex;
+  }
+}
+.search-form label,
+.search-form .search-submit {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .search-form label,
+.search-form .search-submit {
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .search-form .search-field {
+    border-radius: 5px 0 0 5px;
+  }
+}
+.search-form .search-submit {
+  font-family: "open_sans_condensedbold", sans-serif;
+  border-radius: 5px;
+  background-color: #111111;
+  border: 2px solid #111111;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+.search-form .search-submit:hover, .search-form .search-submit:active, .search-form .search-submit:focus {
+  background-color: #ffffff;
+  border-color: #111111;
+  color: #111111;
+}
+@media (min-width: 768px) {
+  .search-form .search-submit {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.entry-content .mwm-aal-container {
+  font-size: 1rem;
+}
+.entry-content .mwm-aal-container .mwm-aal-title {
+  font-size: inherit;
+}
+
+/*# sourceMappingURL=main.css.map */
