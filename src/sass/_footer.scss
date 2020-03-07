@@ -17,5 +17,11 @@
             margin-left: 1rem;
             font-size: 35px;
         }
+
+        a {
+            &:hover, &:focus, &:active {
+                color: $dark-farmhouse-green;
+            }
+        }
     }
 }
