@@ -1,3 +1,11 @@
+#site-navigation {
+    padding-bottom: .5rem;
+
+    @include tablet-up {
+        padding-bottom: 0;
+    }
+}
+
 .site-header {
     background: $white;
     border-top: 3px solid $farmhouse-green;
@@ -7,13 +15,15 @@
 
 .site-header-wrap {
     @include site-container;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
+    @include tablet-up {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .site-branding {
-    @include medium-up {
+    @include tablet-up {
         display: flex;
         align-items: center;
     }
@@ -23,13 +33,13 @@
         font-size: 2.5rem;
         margin: 1rem 0;
 
-        @include medium-up {
+        @include tablet-up {
             margin: 0;
         }
     }
 
     .site-description {
-        @include medium-up {
+        @include tablet-up {
             font-size: 1.2rem;
             margin: 0 0 0 1rem;
         }
@@ -43,12 +53,19 @@
 .main-navigation {
     ul,
     li {
+        width: 100%;
         height: 100%;
+
+        @include tablet-up {
+            width: auto;
+        }
     }
 
     li {
-        display: flex;
-        align-items: center;
+        @include tablet-up {
+            display: flex;
+            align-items: center;
+        }
 
         &:not( .current-menu-item ) {
             a {
@@ -79,7 +96,7 @@
 
     a {
         position: relative;
-        padding-bottom: .5rem;
+        padding: .5rem;
         font-size: 1rem;
         text-transform: uppercase;
 

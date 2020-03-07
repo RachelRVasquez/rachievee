@@ -13,7 +13,6 @@
 function rachievee_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -50,7 +49,6 @@ function rachievee_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function rachievee_customize_preview_js() {
-	//@todo: Put back once I've set up Grunt - assuming I keep this...
-	// wp_enqueue_script( 'rachievee-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'rachievee-main-admin', get_template_directory_uri() . '/dist/js/main-admin.min.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'rachievee_customize_preview_js' );

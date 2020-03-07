@@ -1,4 +1,3 @@
-//import other stylesheets here
 function ready(fn) {
   if (document.readyState != 'loading'){
     console.log('testing Js');
@@ -6,4 +5,3 @@ function ready(fn) {
     document.addEventListener('DOMContentLoaded', fn);
   }
 }
-
