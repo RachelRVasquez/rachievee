@@ -141,6 +141,15 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 
 /**
+* Custom RachieVee Functions
+*/
+
+require get_template_directory() . '/inc/carbon-fields.php';
+
+$Rachievee_Carbon_Fields = new Rachievee_Carbon_Fields();
+$Rachievee_Carbon_Fields->init();
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';

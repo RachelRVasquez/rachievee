@@ -119,3 +119,16 @@ function register_portfolio_categories() {
 	register_taxonomy( 'technologies', array( 'portfolio' ), $args );
 }
 add_action( 'init', 'register_portfolio_categories', 0 );
+
+function remove_portfolio_page_editor() {
+    if ( is_admin() && isset( $_GET['post'] ) ) {
+        $post_id = $_GET['post'];
+        $template = get_post_meta( $post_id, '_wp_page_template', true );
+
+        if ( $template === 'page-portfolio.php' ){
+            remove_post_type_support( 'page', 'editor' );
+			remove_post_type_support( 'page', 'thumbnail' );
+        }
+    }
+}
+add_action( 'init', 'remove_portfolio_page_editor' );
