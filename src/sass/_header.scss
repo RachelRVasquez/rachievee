@@ -16,14 +16,18 @@
 .site-header-wrap {
     @include site-container;
     @include tablet-up {
-        height: 80px;
+        height: 90px;
         display: flex;
         justify-content: space-between;
+    }
+
+    @include medium-up {
+        height: 80px;
     }
 }
 
 .site-branding {
-    @include tablet-up {
+    @include medium-up {
         display: flex;
         align-items: center;
     }
@@ -33,13 +37,13 @@
         font-size: 2.5rem;
         margin: 1rem 0;
 
-        @include tablet-up {
+        @include medium-up {
             margin: 0;
         }
     }
 
     .site-description {
-        @include tablet-up {
+        @include medium-up {
             font-size: 1.2rem;
             margin: 0 0 0 1rem;
         }
@@ -51,6 +55,24 @@
 }
 
 .main-navigation {
+    .menu-header-menu-container {
+        overflow: hidden;
+        height: 100%;
+        padding-bottom: 1rem;
+
+        @include tablet-up {
+            padding-bottom: 0;
+        }
+    }
+
+    .nav-menu {
+        padding-top: 1rem;
+
+        @include tablet-up {
+            padding-top: 0;
+        }
+    }
+
     ul,
     li {
         width: 100%;
@@ -99,8 +121,9 @@
         padding: .5rem;
         font-size: 1rem;
         text-transform: uppercase;
+        letter-spacing: 1px;
 
-        @include tablet-up {
+        @include medium-up {
             padding: 0 1rem;
         }
     }

@@ -14,7 +14,7 @@
 }
 
 .more-link {
-    @include link-btn-style;
+    @include link-btn-style( $font-size: 15px );
 }
 
 .rt-reading-time {

@@ -3,7 +3,22 @@
         margin-bottom: 2rem;
     }
 
+    .port-content {
+        background-color: rgba( 0, 0, 0, 0.05 );
+        border-radius: 5px;
+        padding: 0 2rem 1rem;
+        overflow: hidden;
+
+        @include tablet-up {
+            margin-top: -130px;
+            padding-top: 130px;
+        }
+    }
+
     .port-img-wrapper {
+        max-height: 380px;
+        overflow: hidden;
+
         @include tablet-up {
             width: 85%;
             margin: auto;
@@ -14,6 +29,14 @@
     .port-tech-list,
     .port-excerpt {
         text-align: center;
+    }
+
+    .port-excerpt {
+        margin-bottom: 0;
+    }
+
+    .port-tech-list {
+        margin-top: 0;
     }
 
     .port-more-btn {
@@ -31,6 +54,24 @@
 
         &:hover, &:active, &:focus {
             color: $dark-farmhouse-green;
+        }
+    }
+}
+
+#portfolio-sidebar {
+    .port-widget-title {
+        @include handwritten-bold;
+    }
+
+    .port-sidebar-link {
+        @include link-btn-style;
+        display: block;
+        width: 200px;
+        margin: 1rem auto 0;
+        text-align: center;
+
+        .fab {
+            padding-right: 5px;
         }
     }
 }

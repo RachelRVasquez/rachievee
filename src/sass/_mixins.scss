@@ -46,13 +46,16 @@
     transition: all .3s ease-in-out;
 }
 
-@mixin main-btn-style {
+@mixin main-btn-style( $font-size: 18px, $padding: .8rem 1rem ) {
     @include open-sans-bold;
+    padding: $padding;
     border-radius: 5px;
     background-color: $darkest;
     border: 2px solid $darkest;
+    font-size: $font-size;
     color: $white;
-    padding: .5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &:hover, &:active, &:focus {
         background-color: $white;
@@ -61,8 +64,8 @@
     }
 }
 
-@mixin link-btn-style {
-    @include main-btn-style;
+@mixin link-btn-style( $font-size: 18px, $padding: .8rem 1rem ) {
+    @include main-btn-style( $font-size, $padding );
     text-decoration: none;
 
     &:hover, &:active, &:focus {

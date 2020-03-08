@@ -28,13 +28,18 @@
     }
 
     .search-field {
+        width: 100%;
+        margin-bottom: .5rem;
+
         @include tablet-up {
+            width: auto;
+            margin-bottom: 0;
             border-radius: 5px 0 0 5px;
         }
     }
 
     .search-submit {
-        @include main-btn-style;
+        @include main-btn-style( $font-size: 12px, $padding: .5rem 1rem );
         @include tablet-up {
             border-radius: 0 5px 5px 0;
         }

@@ -83,8 +83,11 @@ form {
 }
 
 .widget-area {
+    margin-bottom: 2rem;
+
     @include tablet-up {
         width: 28%;
         margin-right: 2%;
+        margin-bottom: 0;
     }
 }

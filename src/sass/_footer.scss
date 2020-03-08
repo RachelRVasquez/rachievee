@@ -3,19 +3,31 @@
 
     .site-footer-inner {
         @include site-container;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include tablet-up {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
     #footer-menu {
         list-style: none;
         display: flex;
+        margin-top: .5rem;
         margin-bottom: 0;
+        padding-left: 0;
+
+        @include tablet-up {
+            margin-top: 0;
+        }
 
         .menu-item {
             margin-left: 1rem;
             font-size: 35px;
+
+            &:first-child {
+                margin-left: 0;
+            }
         }
 
         a {

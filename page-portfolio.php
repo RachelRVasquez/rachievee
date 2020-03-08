@@ -14,7 +14,8 @@ $get_portfolio_posts = get_posts([
 	'post_type' => 'portfolio',
 	'orderby'   => 'date',
 	'order'     => 'DESC',
-]); ?>
+]);
+?>
 
 	<div id="primary" class="content-area portfolio-content">
 		<main id="main" class="site-main">
@@ -40,12 +41,12 @@ $get_portfolio_posts = get_posts([
 						<p class="port-excerpt"><?php echo get_the_excerpt( $portfolio->ID ); ?></p>
 						<?php if ( ! empty( $tech_list ) ) { ?>
 							<p class="port-tech-list">
-								<?php echo $tech_list; ?>
+								(<?php echo $tech_list; ?>)
 							</p>
 						<?php } ?>
 						<button class="port-more-btn" name="read-more-portfolio">
 							<?php esc_html_e( 'More about this project', 'rachievee' ); ?>
-							<span aria-hidden="true">&#9660;</span>
+							<span aria-hidden="true" class="fas fa-angle-double-down"></span>
 						</button>
 						<div class="port-full">
 							<?php if ( isset( $port_post ) && !empty( $port_post ) ) {
