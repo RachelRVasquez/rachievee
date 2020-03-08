@@ -62,7 +62,7 @@ form {
     }
 }
 
-.content-area,
+.content-area:not(.portfolio-content),
 .widget-area {
     width: 100%;
     padding: 1rem;

@@ -1,0 +1,36 @@
+.portfolio-content {
+    .port-section {
+        margin-bottom: 2rem;
+    }
+
+    .port-img-wrapper {
+        @include tablet-up {
+            width: 85%;
+            margin: auto;
+        }
+    }
+
+    .port-title,
+    .port-tech-list,
+    .port-excerpt {
+        text-align: center;
+    }
+
+    .port-more-btn {
+        @include remove-btn-defaults;
+        @include open-sans-bold;
+        margin: auto;
+        display: block;
+        color: $text-color;
+        font-size: 1rem;
+
+        span {
+            display: block;
+            padding-top: 5px;
+        }
+
+        &:hover, &:active, &:focus {
+            color: $dark-farmhouse-green;
+        }
+    }
+}
