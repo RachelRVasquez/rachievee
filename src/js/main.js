@@ -1,18 +1,19 @@
 ( function() {
     //update Grunt package: does not support let
-    var morePortContentBtns = document.querySelectorAll( '.port-more-btn' );
+    var portExpandBtns = document.querySelectorAll( '.port-more-btn' );
 
-    if ( !morePortContentBtns ) {
+    if ( !portExpandBtns ) {
         return;
     }
 
-    console.log(morePortContentBtns);
+    console.log(portExpandBtns);
 
-    morePortContentBtns.forEach( function( morePortContentBtn ) {
-        morePortContentBtn.addEventListener( 'click', expandPortContent );
-    });
+    for ( var i = 0; i < portExpandBtns.length; ++i ) {
+        portExpandBtns[i].addEventListener( 'click', expandPortContent );
+    }
 
-    function expandPortContent ( event ) {
+    function expandPortContent ( e ) {
+        e.preventDefault();
         console.log(event);
     }
 } )();
