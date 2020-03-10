@@ -52,7 +52,7 @@ module.exports = function( grunt ) {
 				}
 			}, my_target: {
 				files: {
-					'./dist/js/main.min.js': [ './src/js/navigation.js', './src/js/skip-link-focus-fix.js', './dist/js/main.js' ],
+					'./dist/js/main.min.js': [ './src/js/navigation.js', './src/js/skip-link-focus-fix.js', './src/js/main.js' ],
 					'./dist/js/main-admin.min.js': [ './src/js/customizer.js' ],
 				}
 			}

@@ -45,7 +45,6 @@ if ( ! function_exists( 'rachievee_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'rachievee' ),
-			'menu-2' => esc_html__( 'Portfolio', 'rachievee' ),
 		) );
 
 		/*
@@ -121,7 +120,7 @@ function rachievee_scripts() {
 	wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/4946f82067.js' );
 	wp_enqueue_style( 'rachievee-main', get_template_directory_uri() . '/dist/css/main.min.css' );
 
-	wp_enqueue_script( 'rachievee-main', get_template_directory_uri() . '/dist/js/main.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'rachievee-main', get_template_directory_uri() . '/dist/js/main.min.js' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

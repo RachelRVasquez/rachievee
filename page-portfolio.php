@@ -44,11 +44,11 @@ $get_portfolio_posts = get_posts([
 								(<?php echo $tech_list; ?>)
 							</p>
 						<?php } ?>
-						<button class="port-more-btn" name="read-more-portfolio">
+						<button id="btn-port-<?php echo $portfolio->ID; ?>" class="port-more-btn" name="read-more-portfolio">
 							<?php esc_html_e( 'More about this project', 'rachievee' ); ?>
 							<span aria-hidden="true" class="fas fa-angle-double-down"></span>
 						</button>
-						<div class="port-full">
+						<div id="port-content-<?php echo $portfolio->ID; ?>" class="port-full">
 							<?php if ( isset( $port_post ) && !empty( $port_post ) ) {
 								echo wpautop( $port_post->post_content );
 							} ?>
@@ -58,10 +58,7 @@ $get_portfolio_posts = get_posts([
 			<?php }
 		}
 
-		// get_template_part( 'template-parts/content', 'page' );
-
-		endwhile; // End of the loop.
-		?>
+		endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

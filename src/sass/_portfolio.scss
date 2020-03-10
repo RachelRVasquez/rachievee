@@ -4,7 +4,7 @@
     }
 
     .port-content {
-        background-color: rgba( 0, 0, 0, 0.05 );
+        background-color: rgba( 200, 200, 200, 0.3 );
         border-radius: 5px;
         padding: 0 2rem 1rem;
         overflow: hidden;
@@ -13,6 +13,10 @@
             margin-top: -130px;
             padding-top: 130px;
         }
+    }
+
+    .port-full {
+        display: none;
     }
 
     .port-img-wrapper {
@@ -59,10 +63,6 @@
 }
 
 #portfolio-sidebar {
-    .port-widget-title {
-        @include handwritten-bold;
-    }
-
     .port-sidebar-link {
         @include link-btn-style;
         display: block;

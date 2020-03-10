@@ -20,6 +20,7 @@ if ( ! class_exists( Rachievee_Carbon_Fields ) ) {
                     Field::make( 'text', 'port_sidebar_linkedin', __( 'LinkedIn Link:' ) ),
                     Field::make( 'text', 'port_sidebar_contact', __( 'Contact Link:' ) ),
                     Field::make( 'text', 'port_sidebar_github', __( 'Github Link:' ) ),
+                    Field::make( 'text', 'port_sidebar_stack_exchange', __( 'Stack Exchange Link:' ) ),
                 )
             );
         }
