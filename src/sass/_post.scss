@@ -17,6 +17,10 @@
     @include link-btn-style( $font-size: 15px );
 }
 
+.difficulty-lvl {
+    margin-bottom: 0;
+}
+
 .rt-reading-time {
     @include open-sans-bold;
     margin-bottom: 1rem;

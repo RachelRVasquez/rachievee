@@ -6,7 +6,7 @@
  *
  * @package rachievee
  */
-
+$tutorial_difficulty = get_post_meta( $post->ID, 'tutorial_skill_level', true );
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -28,6 +28,10 @@
 
 	<div class="entry-content">
 		<?php
+		if ( isset( $tutorial_difficulty ) && !empty( $tutorial_difficulty ) ) { ?>
+			<p class="difficulty-lvl"><strong><?php esc_html_e( 'Difficulty Level:', 'rachievee' ); ?> <?php echo esc_html( $tutorial_difficulty ); ?></strong></p>
+		<?php }
+
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */

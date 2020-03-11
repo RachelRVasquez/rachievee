@@ -10,6 +10,8 @@
         portExpandBtns[i].addEventListener( 'click', expandPortContent );
     }
 
+
+    //@todo: Accessibility for expand/collapse
     function expandPortContent ( e ) {
         e.preventDefault();
         var contentPostId = this.getAttribute( 'data-id' );
