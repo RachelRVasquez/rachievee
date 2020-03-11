@@ -46,11 +46,7 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'js', [ 'uglify' ], function() {
 		grunt.config( 'uglify', {
-			options     : {
-				mangle: {
-					reserved: [ 'jQuery' ]
-				}
-			}, my_target: {
+			my_target: {
 				files: {
 					'./dist/js/main.min.js': [ './src/js/navigation.js', './src/js/skip-link-focus-fix.js', './src/js/main.js' ],
 					'./dist/js/main-admin.min.js': [ './src/js/customizer.js' ],

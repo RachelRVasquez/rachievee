@@ -1,4 +1,4 @@
-( function() {
+( function( $ ) {
     //update Grunt package: does not support let
     var portExpandBtns = document.querySelectorAll( '.port-more-btn' );
 
@@ -6,14 +6,28 @@
         return;
     }
 
-    console.log(portExpandBtns);
-
     for ( var i = 0; i < portExpandBtns.length; ++i ) {
         portExpandBtns[i].addEventListener( 'click', expandPortContent );
     }
 
     function expandPortContent ( e ) {
         e.preventDefault();
-        console.log(event);
+        var contentPostId = this.getAttribute( 'data-id' );
+
+        if ( !contentPostId ) {
+            return;
+        }
+
+        var content = document.getElementById( 'port-content-' + contentPostId );
+
+        if ( !content.classList.contains( 'expand' ) ) {
+            content.classList.add( 'expand' );
+            $( content ).slideDown();
+        } else {
+            content.classList.remove( 'expand' );
+            $( content ).slideUp();
+        }
     }
-} )();
+
+
+} )( jQuery );

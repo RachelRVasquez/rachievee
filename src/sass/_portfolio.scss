@@ -17,6 +17,10 @@
 
     .port-full {
         display: none;
+
+        img {
+            border-radius: 5px;
+        }
     }
 
     .port-img-wrapper {
@@ -58,6 +62,7 @@
 
         &:hover, &:active, &:focus {
             color: $dark-farmhouse-green;
+            outline: 2px dotted;
         }
     }
 }

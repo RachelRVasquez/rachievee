@@ -44,7 +44,7 @@ $get_portfolio_posts = get_posts([
 								(<?php echo $tech_list; ?>)
 							</p>
 						<?php } ?>
-						<button id="btn-port-<?php echo $portfolio->ID; ?>" class="port-more-btn" name="read-more-portfolio">
+						<button class="port-more-btn" name="read-more-portfolio" data-id="<?php echo $portfolio->ID; ?>">
 							<?php esc_html_e( 'More about this project', 'rachievee' ); ?>
 							<span aria-hidden="true" class="fas fa-angle-double-down"></span>
 						</button>
