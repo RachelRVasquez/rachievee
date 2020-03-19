@@ -23,6 +23,14 @@ if ( ! class_exists( Rachievee_Carbon_Fields ) ) {
                     Field::make( 'text', 'port_sidebar_stack_exchange', __( 'Stack Exchange Link:' ) ),
                 )
             );
+
+            Container::make( 'post_meta', __( 'Portfolio Metaslider', 'rachievee' ) )
+                ->where( 'post_type', '=', 'page' )
+                ->where( 'post_template', '=', 'page-portfolio.php' )
+                ->add_fields( array(
+                    Field::make( 'text', 'port_slider_id', __( 'Metaslider Shortcode ID:' ) )->set_help_text( 'If the MetaSlider plugin is active, this is where you drop the shortcode ID to display slider.' ),
+                )
+            );
         }
     }
 }

@@ -31,8 +31,12 @@ a, button, input[type="submit"] {
 a {
     color: $text-color;
 
-    &:hover, &:visited, &:active, &:focus {
+    &:visited {
         color: $text-color;
+    }
+
+    &:hover, &:active, &:focus {
+        color: $dark-farmhouse-green;
     }
 }
 

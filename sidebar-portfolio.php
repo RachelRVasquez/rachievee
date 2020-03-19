@@ -43,10 +43,16 @@ if ( get_post_meta( $post->ID, '_wp_page_template', true ) === 'page-portfolio.p
     	</section>
     <?php } ?>
     <?php if( ! empty( $sidebar_linkedin_link ) ) { ?>
-	       <a href="<?php echo esc_url( $sidebar_linkedin_link ); ?>" class="port-sidebar-link"><?php esc_html_e( 'LinkedIn', 'rachievee' ) ; ?></a>
+	       <a href="<?php echo esc_url( $sidebar_linkedin_link ); ?>" class="port-sidebar-link">
+               <span aria-hidden="true" class="fab fa-linkedin"></span>
+               <?php esc_html_e( 'LinkedIn', 'rachievee' ) ; ?>
+           </a>
     <?php } ?>
     <?php if( ! empty( $sidebar_contact_link ) ) { ?>
-	       <a href="<?php echo esc_url( $sidebar_contact_link ); ?>" class="port-sidebar-link"><?php esc_html_e( 'Contact Rachel', 'rachievee' ) ; ?></a>
+	       <a href="<?php echo esc_url( $sidebar_contact_link ); ?>" class="port-sidebar-link">
+               <span aria-hidden="true" class="fas fa-envelope"></span>
+               <?php esc_html_e( 'Contact Rachel', 'rachievee' ) ; ?>
+           </a>
     <?php } ?>
     <?php if( ! empty( $sidebar_github_link ) ) { ?>
         <a href="<?php echo esc_url( $sidebar_github_link ); ?>" class="port-sidebar-link">

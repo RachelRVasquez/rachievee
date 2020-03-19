@@ -15,6 +15,8 @@ $get_portfolio_posts = get_posts([
 	'orderby'   => 'date',
 	'order'     => 'DESC',
 ]);
+
+$slider_shortcode_id = get_post_meta( $post->ID, '_port_slider_id', true );
 ?>
 
 	<div id="primary" class="content-area portfolio-content">
@@ -59,6 +61,13 @@ $get_portfolio_posts = get_posts([
 		}
 
 		endwhile; // End of the loop. ?>
+
+		<?php if ( isset( $slider_shortcode_id ) && ! empty( $slider_shortcode_id ) ) : ?>
+			<section class="metaslider-section">
+				<h4 class="metaslider-title"><?php esc_html_e( 'Other Projects', isda_theme ); ?></h4>
+				<?php echo do_shortcode('[metaslider id="'. $slider_shortcode_id .'"]'); ?>
+			</section>
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

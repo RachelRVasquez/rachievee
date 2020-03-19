@@ -8,6 +8,7 @@
         border-radius: 5px;
         padding: 0 2rem 1rem;
         overflow: hidden;
+        min-height: 340px;
 
         @include tablet-up {
             margin-top: -130px;
@@ -61,8 +62,9 @@
         }
 
         &:hover, &:active, &:focus {
+            font-size: 1.1rem;
             color: $dark-farmhouse-green;
-            outline: 2px dotted;
+            outline: none;
         }
     }
 }
@@ -75,8 +77,14 @@
         margin: 1rem auto 0;
         text-align: center;
 
-        .fab {
+        .fab,
+        .fas {
             padding-right: 5px;
         }
     }
+}
+
+.metaslider-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }

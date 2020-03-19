@@ -71,7 +71,7 @@ if ( ! function_exists( 'rachievee_entry_footer' ) ) :
 					sprintf(
 						wp_kses(
 							/* translators: %s: post title */
-							__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'rachievee' ),
+							__( 'Leave a Comment<span class="screen-reader-text"> on %s</span><span aria-hidden="true" class="fas fa-comment"></span>', 'rachievee' ),
 							array(
 								'span' => array(
 									'class' => array(),

@@ -40,6 +40,12 @@
         @include medium-up {
             margin: 0;
         }
+
+        a {
+            &:hover, &:active, &:focus {
+                color: $dark-farmhouse-green;
+            }
+        }
     }
 
     .site-description {
@@ -107,6 +113,8 @@
                     }
 
                     &:hover, &:focus, &:active {
+                        outline: none;
+                        
                         &:after {
                             opacity: 1;
                             transform: translateY(0px);
@@ -123,6 +131,7 @@
         font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+        color: $text-color;
 
         @include medium-up {
             padding: 0 1rem;
